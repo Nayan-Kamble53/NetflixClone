@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+
+body {
+    background: #000;
+    color:#fff;
+}
+
+hr {
+    height: 1.3vh;
+    background: rgb(77, 76, 76);
+    border: none;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url(images/bgimg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav img {
+    width: 15vw;
+    position: relative;
+    bottom: 12%;
+    left: 55%;
+}
+
+.btn {
+    margin-top: 2%;
+    padding-right: 10%;
+}
+
+button {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    padding-bottom: 5px;
+    width: 7vw;
+    height: 5vh;
+    border-radius: 10%;
+    background: #E50914;
+    color: #fff;
+
+}
+
+.btn img {
+    width: 0.7vw;
+    margin-left: 8px;
+}
+
+.lang {
+    width: 10vw;
+    font-size: 18px;
+    position: relative;
+    right: 10%;
+    background: transparent;
+}
+
+#one {
+    width: 18px;
+    position: relative;
+    top: 10%;
+    right: 5%;
+}
+
+.main-content {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.main-content input {
+    color: white;
+}
+
+.main-content h1 {
+    font-weight: 900;
+    font-size: 50px;
+}
+
+.main-content h3 {
+    margin-top: -0.5%;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.text {
+    width: 27vw;
+    height: 7.5vh;
+    margin-right: 1%;
+    margin-top: 1%;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5));
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.submit {
+    width: 12vw;
+    height: 7.5vh;
+    padding-bottom: 5px;
+    background: #E50914;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section .text-content {
+    margin-bottom: 8%;
+}
+
+.text-content h1 {
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: 7px;
+}
+
+.text-content h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.image img {
+    width: 35vw;
+    margin-top: 20%;
+    margin-bottom: 15%;
+}
+
+.image img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#enjoy {
+    margin: 0 10%;
+}
+
+#show img {
+    margin-left: 30%;
+    width: 25vw;
+}
+
+#download {
+    margin-bottom: 3%;
+}
+
+#download h1, #download h3{
+    margin: 0 15%;
+}
+
+#watch h1, #watch h3{
+    margin: 0 15%;
+    margin-left: 20%;
+}
+
+#ss {
+    margin-right: 15%;
+}
+
+#create {
+    margin-top: 5%;
+}
+
+.faq {
+    margin-bottom: 5%;
+}
+
+.faq h2 {
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 2%;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.accordian {
+    margin-left: 12%;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordian li {
+    list-style: none;
+    width: 75vw;
+    padding: 5px;
+}
+
+.accordian li label {
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 23px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 50px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.accordian .content {
+    font-size: 23px;
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordian input[type="checkbox"]:checked + label + .content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.accordian input[type="checkbox"]:checked + label::after {
+    transform: rotate(135deg);
+}
+
+.main {
+    text-align: center;
+    margin-top: -2%;
+    margin-bottom: 5%;
+}
+
+.que {
+    margin-left: 12%;
+    margin-bottom: 2%;
+    margin-top: 4%;
+    color: #a19f9f;
+}
+
+.que a {
+    color: #a19f9f;
+}
+
+.cols {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    margin-left: 12%;
+}
+
+.cols .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.cols .col a {
+    display: block;
+    color: #a19f9f;
+}
+
+#last {
+    margin-left: 12%;
+    margin-bottom: 5%;
+}
+
+#last button {
+    width: 8vw;
+    background: linear-gradient(rgb(36, 35, 35), rgba(16, 16, 16, 0.7));
+    padding-bottom: 5px;
+    border: 0.5px solid white;
+    font-weight: 400;
+}
+
+button #o {
+    width: 20px;
+    position: relative;
+    right: 5px;
+    top: 4px;
+}
+
+#last p {
+    margin-top: 1.5%;
+    color: #a19f9f;
+    font-size: 14px;
+}
+
+
+
+/* Responsive desing starts here*/
+@media (max-width: 500px) {
+    header {
+        height: 80vh;
+    }
+    .header {
+        padding-top: 3%;
+    }
+    button span{
+        display: none;
+    }
+    button {
+        width: 20vw;
+        height: 5vh;
+    }
+    button #two {
+        width: 3vw;
+    }
+    .lang {
+        width: 20vw;
+    }
+    #logo {
+        width: 35vw;
+        position: relative;
+        left: 5%;
+    }
+    .main-content {
+        margin-top: 15%;
+    }
+    .main-content h1 {
+        font-size: 32px;
+        font-weight: 500;
+        margin: 0 10px;
+    }
+    .main-content h3 {
+        font-size: 22px;
+    }
+    .main-content h4 {
+        font-size: 22px;
+        margin: 0 10%;
+    }
+    .main-content .text {
+        width: 85vw;
+        font-size: 20px;
+        margin-top: 4%;
+    }
+    .submit {
+        width: 50vw;
+        margin-top: 4%;
+        font-size: 25px;
+    }
+    section {
+        display: block;
+        margin-top: 10%;
+    }
+    .rev {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #enjoy h1{
+        font-size: 35px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 10%;
+    }
+    #enjoy h3 {
+        font-size: 22px;
+        font-weight: 200;
+        margin: 0 5%;
+        margin-top: 5%;
+        text-align: center;
+    }
+    #tv img {
+        width: 85vw;
+    }
+    #show {
+        margin-right: 50%;
+        margin-top: -5%;
+    }
+    #show img {
+        width: 80vw;
+    } 
+    
+    #download h1 {
+        font-size: 35px;
+        font-weight: 600;
+        text-align: center;
+        margin: 0 6%;
+        margin-bottom: 5%;
+    }
+    #download h3 {
+        margin: 0 3%;
+        font-size: 25px;
+        text-align: center;
+    }
+    #watch h1 {
+        font-size: 35px;
+        font-weight: 600;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 5%;
+    }
+    #watch h3 {
+        font-size: 24px;
+        margin: 0 5%;
+        text-align: center;
+    }
+    #ss img {
+        width: 90vw;
+        margin-left: 5%;
+    }
+    #create h1 {
+        font-size: 35px;
+        font-weight: 600;
+        margin: 0 8%;
+        margin-bottom: 5%;
+        text-align: center;
+    }
+    #create h3 {
+        font-size: 25px;
+        text-align: center;
+        margin: 0 5%;
+    }
+    #kid img {
+        width: 90vw;
+        margin-left: 3%;
+    }
+    .faq h2 {
+        font-size: 35px;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 10%;
+    }
+    .accordian .content {
+        font-size: 15px;
+    }
+    .accordian li label {
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 500;
+        width: 91vw;
+        height: 10vh;
+        margin-left: -10%;
+    }
+    label::after {
+        font-size: 40px;
+        font-weight: 300;
+        position: absolute;
+        right: 4%;
+    }
+    .accordian  .content {
+        width: 91vw;
+        margin-left: -10%;
+        font-size: 21px;
+    }
+    .main h4 {
+        text-align: center;
+        margin: 0 10%;
+        margin-top: 12%;
+    }
+    .main .text {
+        width: 80vw;
+        font-size: 20px;
+        margin-left: 2%;
+        margin-top: 5%;
+    }
+    .que {
+        margin-bottom: 10%;
+        font-size: 18px;
+    }
+    .cols {
+        display: block;
+        margin-bottom: 10%;
+    }
+    #last button {
+        width: 32vw;
+        margin-bottom: 8%;
+    }
+    #d {
+        width: 3vw;
+    }
+}
